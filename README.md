@@ -7,7 +7,8 @@ The SPOKE database, hosted by Neo4j, can be used as an analytical reference for 
   Node types can be assigned containing different classes of data (e.g., Mission, Study, Results, Genes, Proteins) and each node defined by a label contains {properties}. Similarly, relationships (e.g., Up Regulation, Down Regulation) contain properties such as log2FC and Adjusted p value. 
 
   ### Examples
-  1_CQL_graph_projection_basics.md
+  1_Cypher_query_basics.md
+  2_Graph_projection.md
 
   ### **Resources**
   See [Cypher Getting Started](https://neo4j.com/docs/getting-started/cypher-intro/) for an introduction to Cypher language or the [Cypher Manual](https://neo4j.com/docs/cypher-manual/current/introduction/) for complete documentation. 
