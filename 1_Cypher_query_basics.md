@@ -1,5 +1,5 @@
 # General
-The following block has three `call{}` statements. In the first two we use the experimental data from GLDS to find upregulated genes and protiens. In the third we use these in conjucnction with the SPOKE reference network to map out the actual steps of mRNA transcription and protein translation and their connection to known diseases.
+The following block has three `call{}` statements. In the first two we use the experimental data from GLDS to find upregulated genes and proteins. In the third we use these in conjucnction with the SPOKE reference network to map out the actual steps of mRNA transcription and protein translation and their connection to known diseases.
 
 ## Defining the database
 In each call statement `USE` defines the database to search. `compositenasa.glds` holds the imported datasets from glds. `compositenasa.human` holds the a complete version of the SPOKE network.
@@ -15,7 +15,7 @@ In the third call statement we carry over the important gene information from be
 
 The `MATCH` function here describes a specific relatioship that connects our upregulated genes and proteins to diseases. 
 
-This final matching expression requires that a gene encodes a protien. To satisfy this the gene and protein would've had to been upregulated at the transcrip and protein level. However the relationship connecting to the disease node is left blank `-[]->` which allows any of the connections between protein and disease in the SPOKE database to be returned. 
+This final matching expression requires that a gene encodes a protein. To satisfy this the gene and protein would've had to been upregulated at the transcrip and protein level. However the relationship connecting to the disease node is left blank `-[]->` which allows any of the connections between protein and disease in the SPOKE database to be returned. 
 
 
 ```Cypher

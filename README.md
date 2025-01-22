@@ -1,17 +1,20 @@
 # SPOKE and NASA GeneLab Integration – Notes and Guide  
+This guide is an exploration into testing new visualization tools for the NASA Open Science Data Repository (OSDR). This approach uses the [SPOKE](https://www.matebioservices.com) database and knowledge graph visualization tools from [Neo4j](https://neo4j.com) to link the vast collections of multi-omic data available to the OSDR to a curated reference database.
 
+### Example Files
+These examples cover some basic operations essential to visualizing data using CQL.
+1_Cypher_query_basics.md  
+2_Graph_projection.md  
+3_Analysis_and_complex_relationships.md
+
+### Background
 The SPOKE database, hosted by Neo4j, can be used as an analytical reference for operational datasets containing experimental data. The Neo4j platform is used to interface with the vast collection of connected SPOKE reference databases with the Cypher Query Language, a language based on SQL but specific for graph databases. Cypher is designed to use descriptive text to represent between nodes.
 ```
 (node1) –[:relationships]-> (node2)
 ```
-  Node types can be assigned containing different classes of data (e.g., Mission, Study, Results, Genes, Proteins) and each node defined by a label contains {properties}. Similarly, relationships (e.g., Up Regulation, Down Regulation) contain properties such as log2FC and Adjusted p value. 
+Node types can be assigned containing different classes of data (e.g., Mission, Study, Results, Genes, Proteins) and each node defined by a label contains {properties}. Similarly, relationships (e.g., Up Regulation, Down Regulation) contain properties such as log2FC and Adjusted p value. 
 
-  ### Example Files
-  1_Cypher_query_basics.md
-  2_Graph_projection.md
-  3_Analysis_and_complex_relationships.md
-
-  ### **Resources**
+### **Resources**
   See [Cypher Getting Started](https://neo4j.com/docs/getting-started/cypher-intro/) for an introduction to Cypher language or the [Cypher Manual](https://neo4j.com/docs/cypher-manual/current/introduction/) for complete documentation. 
   
   Visit the [Neo4j Graph Academy](https://graphacademy.neo4j.com/?_gl=1*lgv80f*_ga*MTQ4MjQ0Njg1NS4xNjkwMTUzNTQ3*_ga_DL38Q8KGQC*MTY5MTE3MDEzMy4yMi4xLjE2OTExNzIwMzUuNTguMC4w&_ga=2.106043587.1557279067.1691170135-1482446855.1690153547) for foundational courses.
