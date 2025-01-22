@@ -42,8 +42,6 @@ RETURN a
 ```
 Essentially, this uses data from our experimental database and links to our reference database. By creating an in memory graph of the experimental database we can prune some of the more distant relationships that we are not interested in.
 
-![graphProjection_pruned](https://github.com/user-attachments/assets/62383695-1c83-4bc9-b9e0-c0b648fcd880)
-
 Finally we can call the new graph and display the experimental data using the connections in the SPOKE database.
 ```Cypher
 RETURN a.graphName AS graph, a.nodeCount AS nodes, a.relationshipCount AS rels
