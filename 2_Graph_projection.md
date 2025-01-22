@@ -1,7 +1,10 @@
+## General
+
 In the Cypher query basics we searched two databases and asked a question of our reference database (SPOKE). A feature of working in CQL is to generate in memory graphs which hold a collection of defined variables and relationships found in experimental data. We can then use overlaps from experimental nodes and reference nodes as an entry point to the information in the reference graph.
 
 ![graphProjection_full](https://github.com/user-attachments/assets/3549b497-314d-4166-9bc4-a20be998a1f0)
 
+## Collecting data
 Graph projection relies on selecting data from our experimental data first to transfer to the referecne. The first portion is similar to the calls made in Cypher query basics.
 
 ```Cypher
@@ -24,7 +27,8 @@ UNWIND glds_gids AS glds_gid
 ```
 The third call block again uses the experimental gene and protein ID's but also creates a new variables to store the node information from the SPOKE network: g0, p, and d. Notably, this query does not specify a direction or type of relationship, which will return all possible connections.
 
-Node information is then saved as a new in memory graph database "geneProtDisease". Here it is converted to a variable "a" and is `RETURN` inside this `CALL` function delivers the graph.
+## Projecting a graph
+Node information is saved as a new in memory graph database "geneProtDisease". Here it is converted to a variable "a" and `RETURN` inside this `CALL` function delivers the graph.
 ```Cypher
 CALL{
 WITH glds_pid, glds_gid

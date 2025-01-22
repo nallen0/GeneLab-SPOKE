@@ -1,3 +1,4 @@
+## General
 In this exmaple an in memory graph is projected from just the GLDS database searching for differentially regulated genes or proteins. Here we constrain the relationships but still allow flexibility. Additionally the log2fc property is collected from the relationships and stored as a variable (u) for later analysis.
 
 ```Cypher
@@ -19,7 +20,8 @@ RETURN a.graphName AS graph, a.nodeCount AS nodes, a.relationshipCount AS rels
 
 Above, we can see the relationship from study to dataset which in this case are different tissues. The different tissue then relate to their own set of differentially expressed transcripts, however some are shared and some are unique. Given the constraint of display all possible connections this image only represents a handful of connections. To understand which transcripts or proteins were shared among all datasets and studies we can utilze the graph functions built into Neo4j.
 
-This simple example demonstrates the application of scoring nodes based on their calculated "betweeness centrality", a common knowledge graph statistic. Here we call an in memory graph, calculate the betweeness, and use `.mutate` to write the new data to nodes in the memory graph. Additionally the log2fc was used to weight in the interactions.
+## Knowledge graph statistics
+Here, a simple example demonstrates the application of scoring nodes based on their calculated "betweeness centrality", a common knowledge graph statistic. Below we call an in memory graph, calculate the betweeness, and use `.mutate` to write the new data to nodes in the memory graph. Additionally the log2fc was used to weight in the interactions.
 ```Cypher
 USE compositenasa.glds
 CALL gds.betweenness.mutate('gldsProteins8',{ relationshipWeightProperty: 'log2fc',mutateProperty:'betweenness' })
