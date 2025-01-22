@@ -2,7 +2,7 @@
 
 In the Cypher query basics we searched two databases and asked a question of our reference database (SPOKE). A feature of working in CQL is to generate in memory graphs which hold a collection of defined variables and relationships found in experimental data. We can then use overlaps from experimental nodes and reference nodes as an entry point to the information in the reference graph.
 
-![graphProjection_full](https://github.com/user-attachments/assets/3549b497-314d-4166-9bc4-a20be998a1f0)
+![connected databases](https://github.com/user-attachments/assets/a57ed0d1-966a-4c69-a172-527e222f2e30)
 
 ## Collecting data
 Graph projection relies on selecting data from our experimental data first to transfer to the referecne. The first portion is similar to the calls made in Cypher query basics.
