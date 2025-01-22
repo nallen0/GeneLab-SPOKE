@@ -15,7 +15,7 @@ relationshipProperties:u{.log2fc}
 RETURN a.graphName AS graph, a.nodeCount AS nodes, a.relationshipCount AS rels
 
 ```
-![graphProjection_example2](https://github.com/user-attachments/assets/c785080b-44bb-428a-a2bd-7d0a2a1c4de8)
+![graphProjection_example2](https://github.com/user-attachments/assets/c11d3f0b-ffb6-479f-84ff-ac4195edbf3f)
 
 Above, we can see the relationship from study to dataset which in this case are different tissues. The different tissue then relate to their own set of differentially expressed transcripts, however some are shared and some are unique. Given the constraint of display all possible connections this image only represents a handful of connections. To understand which transcripts or proteins were shared among all datasets and studies we can utilze the graph functions built into Neo4j.
 
@@ -26,8 +26,9 @@ CALL gds.betweenness.mutate('gldsProteins8',{ relationshipWeightProperty: 'log2f
 YIELD centralityDistribution, nodePropertiesWritten
 RETURN centralityDistribution.min AS minimumScore, centralityDistribution.mean AS meanScore, nodePropertiesWritten
 ```
-image3
+![graphProjection_example3](https://github.com/user-attachments/assets/ad6ec392-4506-4874-b34e-acc4feb12fd7)
 
 The results return transcripts ranked by betweeness score. In this case we can think of it as which transcripts are most connected and how important were they. Below is the actual representation of the top transcript and the number of tissues to which it was linked.
 
-image4
+![graphProjection_example4](https://github.com/user-attachments/assets/e2d8df07-8b18-46af-9235-6cf56e90f4e4)
+
