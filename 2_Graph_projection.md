@@ -38,3 +38,5 @@ Finally we can call the new graph and display the experimental data using the co
 ```Cypher
 RETURN a.graphName AS graph, a.nodeCount AS nodes, a.relationshipCount AS rels
 ```
+
+![graphProjection_example1](https://github.com/user-attachments/assets/243bd273-6794-4c5b-8eea-0247268f8b8a)
