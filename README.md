@@ -2,7 +2,7 @@
 This guide is an exploration into testing new visualization tools for the NASA Open Science Data Repository (OSDR). This approach uses the [SPOKE](https://www.matebioservices.com) database and knowledge graph visualization tools from [Neo4j](https://neo4j.com) to link the vast collections of multi-omic data available to the OSDR to a curated reference database.
 
 ### Example Files
-These examples cover some basic operations essential to visualizing data using CQL.
+These examples cover some basic operations essential to visualizing data using CQL.  
 1_Cypher_query_basics.md  
 2_Graph_projection.md  
 3_Analysis_and_complex_relationships.md
