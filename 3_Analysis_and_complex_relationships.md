@@ -15,7 +15,7 @@ relationshipProperties:u{.log2fc}
 RETURN a.graphName AS graph, a.nodeCount AS nodes, a.relationshipCount AS rels
 
 ```
-image2
+![graphProjection_example2](https://github.com/user-attachments/assets/c785080b-44bb-428a-a2bd-7d0a2a1c4de8)
 
 Above, we can see the relationship from study to dataset which in this case are different tissues. The different tissue then relate to their own set of differentially expressed transcripts, however some are shared and some are unique. Given the constraint of display all possible connections this image only represents a handful of connections. To understand which transcripts or proteins were shared among all datasets and studies we can utilze the graph functions built into Neo4j.
 
